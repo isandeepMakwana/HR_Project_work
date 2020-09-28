@@ -98,4 +98,12 @@ To Resctriction the page
 </description>
 </tag>
 
+<tag>
+<name>Guard</name>
+<tag-class>stunning.programmer.hr.tags.GuardTagHandler</tag-class>
+<description>
+To Protect your site for back door entry 
+</description>
+</tag>
+
 </taglib>
