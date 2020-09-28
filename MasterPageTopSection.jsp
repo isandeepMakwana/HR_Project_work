@@ -15,7 +15,7 @@
 <div class='username'>
 <img src='/styletwo/images/userlogo.jpg'  style="width:30px;height:30px;">
 ${userName}&nbsp;
-<a href='/styletwo/logout' >logout</a></div>
+<a href='/styletwo/logout' style='text-decoration:none'>Logout</a></div>
 </div>
 </div>
 <!-- header ends here -->
