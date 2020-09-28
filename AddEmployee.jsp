@@ -1,5 +1,8 @@
 <%@taglib uri='/WEB-INF/mytags/tmtags.tld' prefix='tm' %>
-<tm:Restriction />
+<tm:Guard>
+<jsp:forward page='/LoginForm.jsp' />
+</tm:Guard>
+<!-- <tm:Restriction /> -->
 <tm:FormResubmitted>
 <tm:Module name='HOME' />
 <jsp:forward page='/notifyFormResubmitted' />

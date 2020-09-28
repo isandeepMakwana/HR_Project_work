@@ -7,6 +7,16 @@ public class DeleteDesignation extends HttpServlet
 {
 public void doPost(HttpServletRequest request, HttpServletResponse response)
 {
+HttpSession ss = request.getSession();
+if(ss.getAttribute("userName")==null)
+{
+RequestDispatcher requestDispatcher;
+requestDispatcher = request.getRequestDispatcher("/LoginForm.jsp");
+try{
+requestDispatcher.forward(request, response);
+}
+catch(Exception e){}
+}
 int code=0;
 try
 {
