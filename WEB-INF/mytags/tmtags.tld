@@ -105,5 +105,27 @@ To Resctriction the page
 To Protect your site for back door entry 
 </description>
 </tag>
+ <tag>
+    <name>EntityList</name>
+    <tag-class>stunning.programmer.hr.tags.EntityListTagHandler</tag-class>
+<description>
+ To traverse list of Entity Beans
+    </description>
+    <attribute>
+        <name>name</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  <attribute>
+        <name>populatorClass</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+   <attribute>
+        <name>populatorMethod</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
 
 </taglib>

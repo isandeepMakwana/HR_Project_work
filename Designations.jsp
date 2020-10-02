@@ -18,14 +18,14 @@
 </tr>
 </thead>
 <tbody>
-<tm:Designations>
+<tm:EntityList populatorClass='stunning.programmer.hr.bl.DesignationBL' populatorMethod='getAll' name='dBean'>
 <tr>
 <td style='text-align:right'>${serialNumber}.</td>
-<td>${designationBean.title}</td>
-<td style='text-align:center'><a href='/styletwo/editDesignation?code=${designationBean.code}'>Edit</a></td>
-<td style='text-align:center'><a href='/styletwo/confirmDeleteDesignation?code=${designationBean.code}'>Delete</a></td>
+<td>${dBean.title}</td>
+<td style='text-align:center'><a href='/styletwo/editDesignation?code=${dBean.code}'>Edit</a></td>
+<td style='text-align:center'><a href='/styletwo/confirmDeleteDesignation?code=${dBean.code}'>Delete</a></td>
 <tr>
-</tm:Designations>
+</tm:EntityList>
 </tbody>
 </table>
 </div>

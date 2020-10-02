@@ -5,6 +5,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 public class UpdateDesignation extends HttpServlet
 {
+
 public void doPost(HttpServletRequest request , HttpServletResponse response)
 {
 int code = 0;
@@ -59,5 +60,20 @@ System.out.println(e);
 // do nothing 
 }
 }
+}
+
+public void doGet(HttpServletRequest request, HttpServletResponse response)
+{
+HttpSession ss = request.getSession();
+if(ss.getAttribute("userName")==null)
+{
+RequestDispatcher requestDispatcher;
+requestDispatcher = request.getRequestDispatcher("/LoginForm.jsp");
+try{
+requestDispatcher.forward(request, response);
+}
+catch(Exception e){}
+}
+
 }
 }

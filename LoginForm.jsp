@@ -61,7 +61,7 @@
 <td></td>
                     
 <td style="padding :10px;width: 120px;">
-<button type="submit">Login</button>&nbsp;&nbsp;&nbsp;<a href="#">forget Password</a></a></td>
+<button type="submit">Login</button>&nbsp;&nbsp;&nbsp;<a href="/styletwo/forgetPassword.jsp">forget Password</a></a></td>
                 
 </tr>
             

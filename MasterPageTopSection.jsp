@@ -1,5 +1,7 @@
 <%@taglib uri='/WEB-INF/mytags/tmtags.tld' prefix='tm' %>
-<tm:Restriction />
+<tm:Guard>
+<jsp:forward page='/LoginForm.jsp' />
+</tm:Guard>
 <!DOCTYPE html>
 <html lang='en'>
 <head><title>HR Application </title>
@@ -15,7 +17,7 @@
 <div class='username'>
 <img src='/styletwo/images/userlogo.jpg'  style="width:30px;height:30px;">
 ${userName}&nbsp;
-<a href='/styletwo/logout' style='text-decoration:none'>Logout</a></div>
+<a href='/styletwo/logout' style='text-decoration:none'>logout</a></div>
 </div>
 </div>
 <!-- header ends here -->
