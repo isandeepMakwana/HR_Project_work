@@ -5,6 +5,19 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 public class DeleteDesignation extends HttpServlet
 {
+public void doGet(HttpServletRequest request, HttpServletResponse response)
+{
+RequestDispatcher requestDispatcher;
+try
+{
+requestDispatcher=request.getRequestDispatcher("/Designations.jsp");
+requestDispatcher.forward(request,response);
+}
+catch(Exception exception)
+{
+//do nothing
+}
+}
 public void doPost(HttpServletRequest request, HttpServletResponse response)
 {
 HttpSession ss = request.getSession();
@@ -17,13 +30,19 @@ requestDispatcher.forward(request, response);
 }
 catch(Exception e){}
 }
-int code=0;
+//=====================================
+
 try
 {
 DesignationBean designationBean;
-designationBean = (DesignationBean)request.getAttribute("designationBean");
-code = Integer.parseInt(request.getParameter("code"));
-String title =request.getParameter("title"); 
+designationBean= (DesignationBean)request.getAttribute("designationBean");
+if(designationBean==null)
+{
+RequestDispatcher requestDispatcher;
+requestDispatcher = request.getRequestDispatcher("/Designations.jsp");
+requestDispatcher.forward(request, response);
+}
+int code = designationBean.getCode();
 DesignationDAO designationDAO = new DesignationDAO();
 try{
 designationDAO.deleteByCode(code);
@@ -47,7 +66,15 @@ RequestDispatcher requestDispatcher;
 requestDispatcher = request.getRequestDispatcher("Designations.jsp");
 requestDispatcher.forward(request, response);
 }
-}catch(Exception e){}
 }
-
+catch(Exception e)
+{
+RequestDispatcher requestDispatcher;
+requestDispatcher = request.getRequestDispatcher("ErrorPage.jsp");
+try{
+requestDispatcher.forward(request, response);
+}
+catch(Exception exception2){}
+}
+}
 }

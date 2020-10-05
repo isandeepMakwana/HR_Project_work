@@ -17,9 +17,6 @@
 <td>
 <select id='designationCode' name='designationCode'>
 <option value='-1'>&lt;Select Deseignation&gt;</option>
-<tm:Designations>
-<option value='${designationBean.code}'>${designationBean.title}</option>
-</tm:Designations>
 </select>
 <span id='designationCodeErrorSection' style='color:red'></span><br></td>
 </td>

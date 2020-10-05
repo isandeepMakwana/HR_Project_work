@@ -17,6 +17,26 @@ requestDispatcher.forward(request, response);
 }
 catch(Exception e){}
 }
+doPost(request,response);
+}
+//===============================================
+public void doPost(HttpServletRequest request, HttpServletResponse response)
+{
+try
+{
+String codeString = request.getParameter("code");
+int code=Integer.parseInt(codeString);
+RequestDispatcher requestDispatcher;
+if (codeString==null || code<=0)
+{
+requestDispatcher = request.getRequestDispatcher("/Designations.jsp");
+requestDispatcher.forward(request, response);
+return;
+}
+}catch(Exception e)
+{
+//do nothing
+}
 try
 {
 int code = 0;
@@ -50,7 +70,10 @@ RequestDispatcher requestDispatcher;
 requestDispatcher = request.getRequestDispatcher("Designations.jsp");
 requestDispatcher.forward(request, response);
 }
-}catch(Exception e){}
+}catch(Exception e)
+{
+// do nothing 
+}
 }
 
 }

@@ -8,7 +8,7 @@ private String employeeId;
 private String name;
 private int designationCode;
 private String designation;
-private java.util.Date dateOfBirth;
+private String dateOfBirth;
 private String gender;
 private boolean isIndian;
 private BigDecimal basicSalary;
@@ -20,7 +20,7 @@ this.employeeId="";
 this.name="";
 this.designationCode=0;
 this.designation="";
-this.dateOfBirth=null;
+this.dateOfBirth="";
 this.gender="";
 this.isIndian=false;
 this.basicSalary=null;
@@ -51,10 +51,10 @@ public String getDesignation() {
 public void setDesignation(String designation) {
 	this.designation = designation;
 }
-public java.util.Date getDateOfBirth() {
+public String getDateOfBirth() {
 	return dateOfBirth;
 }
-public void setDateOfBirth(java.util.Date dateOfBirth) {
+public void setDateOfBirth(String dateOfBirth) {
 	this.dateOfBirth = dateOfBirth;
 }
 public String getGender() {
@@ -63,10 +63,10 @@ public String getGender() {
 public void setGender(String gender) {
 	this.gender = gender;
 }
-public boolean isIndian() {
+public boolean getIsIndian() {
 	return isIndian;
 }
-public void setIndian(boolean isIndian) {
+public void setIsIndian(boolean isIndian) {
 	this.isIndian = isIndian;
 }
 public BigDecimal getBasicSalary() {

@@ -2,7 +2,6 @@
 <tm:Guard>
 <jsp:forward page='/LoginForm.jsp' />
 </tm:Guard>
-<!-- <tm:Restriction /> -->
 <tm:FormResubmitted>
 <tm:Module name='HOME' />
 <jsp:forward page='/notifyFormResubmitted' />
