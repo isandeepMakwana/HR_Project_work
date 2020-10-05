@@ -27,6 +27,14 @@ this.basicSalary=null;
 this.panNumber="";
 this.aadharCardNumber="";
 }
+public boolean isMale()
+{
+return gender.equals("M");
+}
+public boolean isFeMale()
+{
+return gender.equals("F");
+}
 public String getEmployeeId() {
 	return employeeId;
 }
