@@ -3,7 +3,6 @@
 <jsp:include page='/MasterPageTopSection.jsp' />
 <link rel='stylesheet' type='text/css' href='/styletwo/css/employees.css'>
 <script src='/styletwo/js/Employees.js'></script>
-<jsp:include page='/EmployeeJS.jsp' />
 <h2>Employees</h2>
 <div class='employeeGrid'>
 <table border='1'>
@@ -53,7 +52,7 @@ Employee Id: <span id='detailPanel_employeeId' style='margin-right:30px;'></span
 <tr>
 <td>Basic Salary: <span id='detailPanel_basicSalary' style='margin-right:30px;'></span></td>
 <td>PAN Number :<span id='detailPanel_panNumber' style='margin-right:30px;'></span></td>
-<td>Aadhar card Number : <span id='detailPanel_addharCardNumber' style='margin-right:30px;'></span></td>
+<td>Aadhar card Number : <span id='detailPanel_aadharCardNumber' style='margin-right:30px;'></span></td>
 </tr>
 
 </table>
