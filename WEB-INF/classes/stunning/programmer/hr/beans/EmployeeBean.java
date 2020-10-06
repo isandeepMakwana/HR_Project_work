@@ -11,7 +11,7 @@ private String designation;
 private String dateOfBirth;
 private String gender;
 private boolean isIndian;
-private BigDecimal basicSalary;
+private String basicSalary;
 private String panNumber;
 private String aadharCardNumber;
 public EmployeeBean()
@@ -77,10 +77,10 @@ public boolean getIsIndian() {
 public void setIsIndian(boolean isIndian) {
 	this.isIndian = isIndian;
 }
-public BigDecimal getBasicSalary() {
+public String getBasicSalary() {
 	return basicSalary;
 }
-public void setBasicSalary(BigDecimal basicSalary) {
+public void setBasicSalary(String basicSalary) {
 	this.basicSalary = basicSalary;
 }
 public String getPanNumber() {

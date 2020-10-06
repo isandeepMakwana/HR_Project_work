@@ -3,6 +3,7 @@
 <jsp:include page='/MasterPageTopSection.jsp' />
 <link rel='stylesheet' type='text/css' href='/styletwo/css/employees.css'>
 <script src='/styletwo/js/Employees.js'></script>
+<jsp:include page='/EmployeeJS.jsp' />
 <h2>Employees</h2>
 <div class='employeeGrid'>
 <table border='1'>
@@ -24,7 +25,7 @@
 <tbody>
 <tm:EntityList populatorClass='stunning.programmer.hr.bl.EmployeeBL' populatorMethod='getAll' name='employeeBean'>
 <tr style='cursor:pointer' onclick='selectEmployee(this,"${employeeBean.employeeId}")'>
-<td style='text-align:right'>${serialNumber}</td>
+<td style='text-align:right'>${serialNumber}. </td>
 <td>${employeeBean.employeeId}</td>
 <td>${employeeBean.name}</td>
 <td>${employeeBean.designation}</td>
