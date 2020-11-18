@@ -14,6 +14,7 @@ private boolean isIndian;
 private String basicSalary;
 private String panNumber;
 private String aadharCardNumber;
+private String checkvalue;
 public EmployeeBean()
 {
 this.employeeId="";
@@ -26,6 +27,15 @@ this.isIndian=false;
 this.basicSalary=null;
 this.panNumber="";
 this.aadharCardNumber="";
+this.checkvalue="";
+}
+public String checked()
+{
+if(gender.equals("M")||gender.equals("F"))
+{
+this.checkvalue="checked";
+}
+return checkvalue;
 }
 public boolean isMale()
 {

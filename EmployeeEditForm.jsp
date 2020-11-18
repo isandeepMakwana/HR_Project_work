@@ -1,14 +1,15 @@
 ﻿<%@taglib uri='/WEB-INF/mytags/tmtags.tld' prefix='tm' %>
 <jsp:useBean id='employeeBean' scope='request' class='stunning.programmer.hr.beans.EmployeeBean' />
 <jsp:useBean id='employeeErrorBean' scope='request' class='stunning.programmer.hr.beans.EmployeeErrorBean' />
+<jsp:useBean id='ErrorBean' scope='request' class='stunning.programmer.hr.beans.ErrorBean' />
 <tm:Module name ='EMPLOYEE' />
 <jsp:include page='/MasterPageTopSection.jsp' />
 <script src='/styletwo/js/EmployeeAddForm.js'></script>
 <form id='cancelAdditionForm' action='/styletwo/Employees.jsp' >
 </form>
-<h2>Employee (Add Module)</h2>
-<form method='post' action='/styletwo/AddEmployee.jsp' onsubmit='return validateFrom(this)'>
-<tm:FormID />
+<h2>Employee (Edit Module)</h2>
+<form method='post' action='/styletwo/UpdateEmployee.jsp' onsubmit='return validateFrom(this)'>
+<input type="hidden" id='employeeId' name='employeeId' value='${employeeBean.employeeId}'>
 <table>
 <tr>
 <td>Name</td>
@@ -86,7 +87,7 @@
 </tr>
 <tr>
 <td colsan='2'>
-<button type='submit'>Add</button>&nbsp;&nbsp;<button type='Button' onclick='CencelAddition()'>Cancel</button></td>
+<button type='submit'>Update</button>&nbsp;&nbsp;<button type='Button' onclick='CencelAddition()'>Cancel</button></td>
 </tr>
 </table>
 </form>

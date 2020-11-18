@@ -27,6 +27,7 @@ String aadharCardNumber;
 employeeId=employeeBean.getEmployeeId();
 name=employeeBean.getName();
 designationCode=employeeBean.getDesignationCode();
+String designation=employeeBean.getDesignation();
 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 dateOfBirth=simpleDateFormat.parse(employeeBean.getDateOfBirth());
 gender=employeeBean.getGender();
@@ -50,8 +51,27 @@ employeeDTO.setAadharCardNumber(aadharCardNumber);
 EmployeeDAO employeeDAO = new EmployeeDAO();
 
 boolean panNumberExists = employeeDAO.panNumberExists(panNumber);
-boolean aadharCardExists = employeeDAO.aadharCardNumberExists(aadharCardNumber);
+boolean aadharCardNumberExists = employeeDAO.aadharCardNumberExists(aadharCardNumber);
 
+if (panNumberExists==true|| aadharCardNumberExists==true)
+{
+EmployeeErrorBean employeeErrorBean;
+employeeErrorBean = new EmployeeErrorBean();
+if(panNumberExists==true)
+employeeErrorBean.setError1("PanNumber is Exists");
+if(aadharCardNumberExists==true)
+employeeErrorBean.setError2("AadharCardNumber is Exists");
+request.setAttribute("employeeErrorBean",employeeErrorBean);
+try
+{
+RequestDispatcher requestDispatcher;
+requestDispatcher=request.getRequestDispatcher("/EmployeeAddForm.jsp");
+requestDispatcher.forward(request,response);
+}catch(Exception e)
+{
+// do nothing
+}
+}
 
 try
 {

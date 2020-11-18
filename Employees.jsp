@@ -5,7 +5,7 @@
 <script src='/styletwo/js/Employees.js'></script>
 <h2>Employees</h2>
 <div class='employeeGrid'>
-<table border='1'>
+<table border='1' id='employeesGridTable'>
 <thead>
 <tr>
 <th colspan='6' class='employeeGridHeader'>
@@ -22,16 +22,14 @@
 </tr>
 </thead>
 <tbody>
-<tm:EntityList populatorClass='stunning.programmer.hr.bl.EmployeeBL' populatorMethod='getAll' name='employeeBean'>
-<tr style='cursor:pointer' onclick='selectEmployee(this,"${employeeBean.employeeId}")'>
-<td style='text-align:right'>${serialNumber}. </td>
-<td>${employeeBean.employeeId}</td>
-<td>${employeeBean.name}</td>
-<td>${employeeBean.designation}</td>
-<td style='text-align:center'><a href='/styletwo/editEmployee?employeeId=${employeeBean.employeeId}'>Edit</a></td>
-<td style='text-align:center'><a href='/styletwo/confirmDeleteEmployee?employeeId=${employeeBean.employeeId}'>Delete</a></td>
+<tr style='cursor:pointer'>
+<td style='text-align:right' placeHolderId='serialNumberPlaceHolder'></td>
+<td placeHolderId='employeeId'></td>
+<td placeHolderId='name'></td>
+<td placeHolderId='designation'></td>
+<td style='text-align:center' placeHolderId='editOption'></td>
+<td style='text-align:center' placeHolderId='deleteOption'></td>
 </tr>
-</tm:EntityList>
 </tbody>
 </table>
 </div>
